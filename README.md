@@ -4,6 +4,15 @@ You can use the [editor on GitHub](https://github.com/gadigun/Personal_history/e
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
+---
+(Hyphens)
+
+***
+(Asterisks)
+
+___
+(Underscores)
+
 | 값 | 의미 | 기본값 |
 |---|:---:|---:|
 | `static` | 유형(기준) 없음 / 배치 불가능 | `static` |
