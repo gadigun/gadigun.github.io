@@ -51,23 +51,26 @@ Syntax highlighted code block
 
 ```
 ---
-(Hyphens)
-코루틴 최적화
-internal static class YieldInstructionCache
-{
-    public static readonly WaitForEndOfFrame WaitForEndOfFrame = new WaitForEndOfFrame();
-    public static readonly WaitForFixedUpdate WaitForFixedUpdate = new WaitForFixedUpdate();
-    private static readonly Dictionary<float, WaitForSeconds> waitForSeconds = new Dictionary<float, WaitForSeconds>();
 
-    public static WaitForSeconds WaitForSeconds(float seconds)
+코루틴 최적화
+class 
+{
+    internal static class YieldInstructionCache
     {
-        WaitForSeconds wfs;
-        if (!waitForSeconds.TryGetValue(seconds, out wfs))
-            waitForSeconds.Add(seconds, wfs = new WaitForSeconds(seconds));
-        return wfs;
+        public static readonly WaitForEndOfFrame WaitForEndOfFrame = new WaitForEndOfFrame();
+        public static readonly WaitForFixedUpdate WaitForFixedUpdate = new WaitForFixedUpdate();
+        private static readonly Dictionary<float, WaitForSeconds> waitForSeconds = new Dictionary<float, WaitForSeconds>();
+
+        public static WaitForSeconds WaitForSeconds(float seconds)
+        {
+            WaitForSeconds wfs;
+            if (!waitForSeconds.TryGetValue(seconds, out wfs))
+                waitForSeconds.Add(seconds, wfs = new WaitForSeconds(seconds));
+            return wfs;
+        }
     }
 }
 
 From Client. DJ ( https://moondongjun.tistory.com/ )
+
 ---
-(Hyphens)
