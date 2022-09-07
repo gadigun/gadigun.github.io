@@ -61,3 +61,7 @@ this를 사용해서 Ex함수의 target을 자동으로 넘겨줌
 ```
 
 ---
+
+유니티 에디터 
+https://debuglog.tistory.com/32?category=709598
+
