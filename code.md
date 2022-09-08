@@ -89,3 +89,9 @@ public class Example
 // The example displays the following output:
 //        0.3333333 = 0.3333333: True
 ```
+
+https://magi82.github.io/android-mvc-mvp-mvvm/
+https://beomy.tistory.com/43
+https://gmlwjd9405.github.io/2018/07/06/design-pattern.html
+
+
