@@ -78,9 +78,11 @@ public class Example
    {
       float value1 = .3333333f;
       float value2 = 1.0f/3;
-      int precision = 7;
-      value1 = (float) Math.Round(value1, precision);
-      value2 = (float) Math.Round(value2, precision);
+      int precision = 7;            // 소수점 자리수 제한
+      
+      value1 = (float) Math.Round(value1, precision);   // 소수점 수정
+      value2 = (float) Math.Round(value2, precision);   // 소수점 수정
+      
       Console.WriteLine("{0:R} = {1:R}: {2}", value1, value2, value1.Equals(value2));
    }
 }
