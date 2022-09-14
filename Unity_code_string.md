@@ -157,8 +157,6 @@ yield return StartCoroutine (IEnumerator coroutine);
  의존성 있는 여러작업을 수행하는데에 유리하게 사용 될 수 있습니다.
 
  ```
- 
-5H85R2-NM4RCC-32Y4TV-J42G5A-NEWE1A-ABZB23-RGX2QC
 
 Unity
 http://theeye.pe.kr/archives/tag/waituntil
@@ -166,7 +164,10 @@ http://theeye.pe.kr/archives/tag/waituntil
 ```markdown
 
 String Format for Int [C#]
-Integer numbers can be formatted in .NET in many ways. You can use static method String.Format or instance method int.ToString. Following examples shows how to align numbers (with spaces or zeroes), how to format negative numbers or how to do custom formatting like phone numbers.
+Integer numbers can be formatted in .NET in many ways. 
+You can use static method String.Format or instance method int.ToString. 
+Following examples shows how to align numbers (with spaces or zeroes),
+how to format negative numbers or how to do custom formatting like phone numbers.
 
 Add zeroes before number
 To add zeroes before a number, use colon separator ?:“and write as many zeroes as you want.
@@ -176,7 +177,8 @@ String.Format("{0:00000}", 15);          // "00015"
 String.Format("{0:00000}", -15);         // "-00015"
 
 Align number to the right or left
-To align number to the right, use comma ?,“ followed by a number of characters. This alignment option must be before the colon separator.
+To align number to the right, use comma ?,“ followed by a number of characters.
+This alignment option must be before the colon separator.
 
 [C#]
 String.Format("{0,5}", 15);              // "   15"
@@ -185,7 +187,9 @@ String.Format("{0,5:000}", 15);          // "  015"
 String.Format("{0,-5:000}", 15);         // "015  "
 
 Different formatting for negative numbers and zero
-You can have special format for negative numbers and zero. Usesemicolon separator ?;“ to separate formatting to two or three sections. The second section is format for negative numbers, the third section is for zero.
+You can have special format for negative numbers and zero.
+Usesemicolon separator ?;“ to separate formatting to two or three sections.
+The second section is format for negative numbers, the third section is for zero.
 
 [C#]
 String.Format("{0:#;minus #}", 15);      // "15"
@@ -202,5 +206,3 @@ String.Format("{0:##-####-####}", 8958712551);       // "89-5871-2551"
  ```
  
 출처 http://www.csharp-examples.net/examples/
-[출처] c# String.Format && string 자릿수 맞추기|작성자 똥이꼼
- 
