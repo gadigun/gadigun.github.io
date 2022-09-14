@@ -3,23 +3,28 @@ C#에서 스트링에 콤마 표시를 위해서는
 ToString이나 string.Format으로
 
 서식지정자를 이용 하면 간단 하게 숫자에 콤마 표시를 할 수 있다. 
-``meta
+
+```markdown
+
 long value =  100000000;
-print(value.ToString("C"));      // 화폐단위 ₩100,000,000
-print(value.ToString("C2"));     // 화폐단위 + 소숫점 2자리까리 표시 ₩100,000,000.00
-print(value.ToString("N0"));     // 콤마만 표시 100,000,000
-print(value.ToString("N"));      // 콤마만 표시 + 소숫점 2자리 100,000,000.00
-print(value.ToString("N2"));     // 콤마만 표시 + 소숫점 2자리 100,000,000.00
-print(value.ToString("#,##0")); // 콤마만 표시 100,000,000 
+print(value.ToString("C"));             // 화폐단위 ₩100,000,000
+print(value.ToString("C2"));            // 화폐단위 + 소숫점 2자리까리 표시 ₩100,000,000.00
+print(value.ToString("N0"));            // 콤마만 표시 100,000,000
+print(value.ToString("N"));             // 콤마만 표시 + 소숫점 2자리 100,000,000.00
+print(value.ToString("N2"));            // 콤마만 표시 + 소숫점 2자리 100,000,000.00
+print(value.ToString("#,##0"));         // 콤마만 표시 100,000,000 
 print(string.Format( "{0:N0}", value)); // 콤마만 표시 100,000,000
-``
+
+```
 C 와 N은 언어와 문화권에 따라서 표기법이 자동으로 바껴서 표기 된다. 
 
 그래서 다국어 작업 할 때 유리.
 
-``meta
+```markdown
+
 using System.Globalization;
 CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("fr-FR");
+
 으로 변경 가능하다.
  
 
@@ -29,7 +34,7 @@ CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("fr-FR");
 , : 콤마 표시
 string.Format : ToString 말고 string.Format 함수로도 사용 할 수 있다.
 
-``
+```
 
 MSDN docs.microsoft.com/ko-kr/dotnet/standard/base-types/standard-numeric-format-strings
 
@@ -108,6 +113,8 @@ DateTime.Now.ToString("yyyy MMM dd (ddd) tt HH mm s", new CultureInfo("en-US"))
 Unity
 http://theeye.pe.kr/archives/tag/waituntil
 
+```markdown
+
 WaitUntil ( () => _isEnd )  // _isEnd가 true이면 종료
 WaitWhile( () => _isEnd ) // _isEnd가 false 이면 종료
 
@@ -135,3 +142,7 @@ WaitForEndOfFrame를 이야기 했다면 이것을 꼭 이야기 해야 할 것 
 
 yield return StartCoroutine (IEnumerator coroutine);
 이번에는 심지어 코루틴 내부에서 또다른 코루틴을 호출할 수 있습니다. 물론 그 코루틴이 완료될 때까지 기다리게 됩니다. 의존성 있는 여러작업을 수행하는데에 유리하게 사용 될 수 있습니다.
+
+ ```
+ 
+ 
