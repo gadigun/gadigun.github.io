@@ -3,7 +3,7 @@ C#에서 스트링에 콤마 표시를 위해서는
 ToString이나 string.Format으로
 
 서식지정자를 이용 하면 간단 하게 숫자에 콤마 표시를 할 수 있다. 
-
+``meta
 long value =  100000000;
 print(value.ToString("C"));      // 화폐단위 ₩100,000,000
 print(value.ToString("C2"));     // 화폐단위 + 소숫점 2자리까리 표시 ₩100,000,000.00
@@ -12,11 +12,12 @@ print(value.ToString("N"));      // 콤마만 표시 + 소숫점 2자리 100,000
 print(value.ToString("N2"));     // 콤마만 표시 + 소숫점 2자리 100,000,000.00
 print(value.ToString("#,##0")); // 콤마만 표시 100,000,000 
 print(string.Format( "{0:N0}", value)); // 콤마만 표시 100,000,000
- 
+``
 C 와 N은 언어와 문화권에 따라서 표기법이 자동으로 바껴서 표기 된다. 
 
 그래서 다국어 작업 할 때 유리.
 
+``meta
 using System.Globalization;
 CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("fr-FR");
 으로 변경 가능하다.
@@ -25,8 +26,10 @@ CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("fr-FR");
 #,##0 는 사용자 지정 서식 지정자로 
 # : 0이 앞에 붙지 않음. 해당 자리에 숫자가 있으면 표시 없으면 표시 안 함. 
 0 : 0이 앞에 붙음.  해당 자리에 숫자가 있으면 숫자 표시, 숫자가 없으면 0으로 표시 함
-, : 콤마 표시 
+, : 콤마 표시
 string.Format : ToString 말고 string.Format 함수로도 사용 할 수 있다.
+
+``
 
 MSDN docs.microsoft.com/ko-kr/dotnet/standard/base-types/standard-numeric-format-strings
 
