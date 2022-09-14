@@ -100,3 +100,35 @@ DateTime.Now.ToString("yyyy MMM dd (ddd) tt HH mm s", new CultureInfo("en-US"))
 
 결과값
 2012 Jun 20 (Wed) PM 16 12 36
+
+
+Unity
+http://theeye.pe.kr/archives/tag/waituntil
+
+WaitUntil ( () => _isEnd )  // _isEnd가 true이면 종료
+WaitWhile( () => _isEnd ) // _isEnd가 false 이면 종료
+
+Func<int, int> func1 = (int x) => x + 1;
+Func<int, int> func2 = (int x) => { return x + 1; };
+
+yield return new WaitUntil (System.Func<Bool> predicate);
+이번엔 특정 조건식이 성공할때까지 기다리는 방법입니다.
+
+yield return new WaitWhile(System.Func<Bool> predicate);
+WaitWhile은 false가 될때까지 기다립니다.
+
+yield return new WaitForSecondsRealtime (float time);
+WaitForSeconds와 하는 역할은 동일하지만 결정적으로 다른것이 있습니다. 유니티상의 시간은 임의로 느리게 하거나 빠르게 하는 것이 가능합니다. 이를 Time.timeScale을 통해서 조정을 할 수 있습니다. 매트릭스에서 보던 총알이 느리게 날아오면서 그것을 피하는 모션을 구현해 본다면 이 값을 1보다 낮추게 되면 현재 시간의 진행보다 느려지게 되며 1보다 빠르게 변경하면 현재의 시간의 진행보다 빨라지게 됩니다. 하지만 WaitForSecondsRealtime는 이러한 Scaled Time의 영향을 받지 않고 현실 시간 기준으로만 동작을 하게 됩니다.
+
+yield return new WaitForFixedUpdate ();
+다음 FixedUpdate() 가 실행될때까지 기다리게 됩니다. 이 FixedUpdate()는 Update()와 달리 일정한 시간 단위로 호출되는 Update() 함수라고 생각하시면 됩니다.
+
+yield return new WaitForEndOfFrame ();
+하나의 프레임워 완전히 종료될 때 호출이 됩니다. Update(), LateUpdate() 이벤트가 모두 실행되고 화면에 렌더링이 끝난 이후에 호출이 됩니다. 특수한 경우에 사용하면 될 것 같습니다만 잘 모르겠군요.
+
+
+yield return null;
+WaitForEndOfFrame를 이야기 했다면 이것을 꼭 이야기 해야 할 것 같습니다. yield return null; 을 하게 되면 다음 Update() 가 실행될때까지 기다린다는 의미를 갖게 됩니다. 좀 더 정확하게는 Update()가 먼저 실행되고 null을 양보 반환했던 코루틴이 이어서 진행 됩니다. 그 다음에 LateUpdate()가 호출됩니다.
+
+yield return StartCoroutine (IEnumerator coroutine);
+이번에는 심지어 코루틴 내부에서 또다른 코루틴을 호출할 수 있습니다. 물론 그 코루틴이 완료될 때까지 기다리게 됩니다. 의존성 있는 여러작업을 수행하는데에 유리하게 사용 될 수 있습니다.
