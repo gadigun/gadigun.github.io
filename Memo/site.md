@@ -112,15 +112,12 @@ http://www.creativeuncut.com/game-art-galleries.html
 http://blog.bloodcat.com/245
 http://hiiroyui.egloos.com/category/Unity
 
-UJeongBil 303, 391-4, Seogyo-dong, Mapo-gu, Seoul, Korea (121-839)
 http://www.youtube.com/watch?v=Uvnwu5SIKMk
 http://stackoverflow.com/
 http://www.hoons.net/Board/cshaptip/Content/27776
 
 http://tf3dm.com/3d-models/characters/4/max
 http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:tiled_maps
-
-Unable to find suitable jdk installaion
 
 로딩 페이지 및 로딩 프로그래스바
 http://www.unitystudy.net/bbs/board.php?bo_table=tip&wr_id=52
