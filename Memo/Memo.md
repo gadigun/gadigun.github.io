@@ -1,5 +1,16 @@
 Unity http://theeye.pe.kr/archives/tag/waituntil
 
+1. CString을 char으로 변환
+CString csTest;
+csTest = "I Love You";
+char* cTest = LPSTR(LPCTSTR(csTest));
+ 
+2. char을 CString으로 변환
+char cTest[10] = "I Love You";
+CString csTest;
+csTest.Format("%s", cTest);
+
+
 WaitUntil ( () => _isEnd )  // _isEnd가 true이면 종료
 WaitWhile( () => _isEnd ) // _isEnd가 false 이면 종료
 
