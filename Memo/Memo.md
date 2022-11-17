@@ -1,10 +1,4 @@
-5H85R2-NM4RCC-32Y4TV-J42G5A-NEWE1A-ABZB23-RGX2QC
-
-Unity
-http://theeye.pe.kr/archives/tag/waituntil
-
-아마존 원격 암호
-rNwWKSzNGyNfv739)fG2Qz6quD&d$(yl
+Unity http://theeye.pe.kr/archives/tag/waituntil
 
 WaitUntil ( () => _isEnd )  // _isEnd가 true이면 종료
 WaitWhile( () => _isEnd ) // _isEnd가 false 이면 종료
