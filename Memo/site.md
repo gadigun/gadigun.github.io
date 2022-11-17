@@ -5,7 +5,11 @@ https://www.youtube.com/watch?v=aFOd4aYtNh0
 
 https://www.reddit.com/user/Sanketpanda/comments/f475vn/make_a_curved_line_using_unity3d_line_renderer/?utm_source=share&utm_medium=web2x
 
+http://mdkforum.co.kr/manuals/Manual-HTML/tutorial/bootcamp-advanced.html
+http://opentutorials.org/course/3
 
+https://dl.dropboxusercontent.com/
+http://cretapatchtest.mygamesonline.org/
 
 유니테스크
 
