@@ -160,6 +160,32 @@ public class RadixSortExample
 {
     public static void Main()
     {
+/*
+주요 기능:
+
+기본 Radix Sort - 양의 정수 배열 정렬
+음수 지원 - 음수와 양수가 혼재된 배열 정렬
+제네릭 버전 - 사용자 정의 키 선택자를 사용한 정렬
+성능 테스트 - 대용량 데이터에 대한 성능 측정
+
+알고리즘 특징:
+
+시간 복잡도: O(d × (n + k)) - d는 자릿수, n은 원소 개수, k는 각 자릿수 범위(10)
+공간 복잡도: O(n + k)
+안정 정렬: 동일한 값의 상대적 순서 유지
+비교 기반이 아닌 정렬: 계수 정렬(Counting Sort) 기반
+*/
+// ----------------------------------------------------------------
+// 사용 방법 
+        int[] numbers = { 170, 45, 75, 90, 2, 802, 24, 66 };
+        RadixSort.Sort(numbers);
+        
+        // 음수 포함 배열
+        int[] withNegatives = { -5, 2, -8, 0, 9, -1, 5, -3 };
+        RadixSort.SortWithNegatives(withNegatives);
+// ----------------------------------------------------------------
+        
+        
         Console.WriteLine("=== Radix Sort Examples ===\n");
         
         // Test 1: Basic positive integers
